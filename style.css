@@ -403,7 +403,7 @@
      }
 
      .spine-crease {
-         top: 50%;
+         top: 48%;
          left: 0;
          transform: translateY(-50%);
          width: 100%;
@@ -972,7 +972,6 @@
      padding: clamp(16px, 3vw, 26px) clamp(12px, 2.5vw, 22px);
      position: relative;
      overflow: hidden;
-     min-height: clamp(340px, 55vh, 420px);
  }
 
  .result-page-left {
