@@ -2,16 +2,16 @@
 // The key magic: id === sum of bits where it appears
 // e.g. Owl = bits [1,2] → id=3; Fox = bits[1,8] → id=9
 const NAMES = [
-  { id: 1, name: "Cat", icon: "🐱", bits: [1] },
-  { id: 2, name: "Dog", icon: "🐶", bits: [2] },
-  { id: 3, name: "Owl", icon: "🦉", bits: [1, 2] },
-  { id: 4, name: "Bee", icon: "🐝", bits: [4] },
-  { id: 5, name: "Ant", icon: "🐜", bits: [1, 4] },
-  { id: 6, name: "Cow", icon: "🐮", bits: [2, 4] },
-  { id: 7, name: "Pig", icon: "🐷", bits: [1, 2, 4] },
-  { id: 8, name: "Hen", icon: "🐔", bits: [8] },
-  { id: 9, name: "Fox", icon: "🦊", bits: [1, 8] },
-  { id: 10, name: "Bat", icon: "🦇", bits: [2, 8] },
+  { id: 1, name: "Lipstick", icon: "💄", bits: [1] },
+  { id: 2, name: "Perfume", icon: "🌸", bits: [2] },
+  { id: 3, name: "Compact", icon: "🪞", bits: [1, 2] },
+  { id: 4, name: "Nail Polish", icon: "💅", bits: [4] },
+  { id: 5, name: "Foundation", icon: "🧴", bits: [1, 4] },
+  { id: 6, name: "Mascara", icon: "👁️", bits: [2, 4] },
+  { id: 7, name: "Blush", icon: "🌺", bits: [1, 2, 4] },
+  { id: 8, name: "Eyeliner", icon: "✏️", bits: [8] },
+  { id: 9, name: "Highlighter", icon: "✨", bits: [1, 8] },
+  { id: 10, name: "Makeup Kit", icon: "🎁", bits: [2, 8] },
 ];
 
 const SARCASM = [
