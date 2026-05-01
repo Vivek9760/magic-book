@@ -24,7 +24,7 @@ const SARCASM = [
     comment: "The ancient book trembles. You answered with the confidence of someone who wasn't paying attention.",
     sub: "No judgment. Well, a little",
   },
-  { icon: "✨", comment: "Your creature escaped through a logical gap you helpfully provided. Impressive.", sub: "The oracle sighs" },
+  { icon: "✨", comment: "Your makeup item escaped through a logical gap you helpfully provided. Impressive.", sub: "The oracle sighs" },
   { icon: "🐾", comment: "The animals held a vote. They've agreed you were distracted. They're very forgiving.", sub: "Try once more, brave soul" },
 ];
 
@@ -32,7 +32,7 @@ const DECO_VERSES = [
   "Ponder well,\nfor the Oracle sees\nall hesitation…",
   "Truth resides\nin the quiet mind,\nnot the quick hand.",
   "The ancient ink\nknows not of doubt —\nonly answers.",
-  "Does thy creature\ndwell herein?\nSpeak true.",
+  "Does thy item\ndwell herein?\nSpeak true.",
 ];
 
 let state = { screen: "cover", currentPage: 0, selections: [] };
@@ -112,10 +112,10 @@ function render() {
           <div class="choose-page choose-page-left">
             <div class="big-emote">🔮</div>
             <div class="left-title">Gaze into<br>the Crystal</div>
-            <div class="left-subtitle">Choose one animal<br>and hold it in your mind…</div>
+            <div class="left-subtitle">Choose one makeup item<br>and hold it in your mind…</div>
           </div>
           <div class="choose-page choose-page-right">
-            <div class="right-title">✦ The Creatures ✦</div>
+            <div class="right-title">✦ The Makeup item's ✦</div>
             <div class="animals-choose-grid">
               ${NAMES.map(
                 (n) => `
@@ -144,7 +144,7 @@ function render() {
           <div class="page-left">
             <div class="page-header">✦ Chapter ${pageNum} of 4 ✦</div>
             <div class="divider-ornament">— ✦ —</div>
-            <div class="page-question">Does your creature appear among these?</div>
+            <div class="page-question">Does your item appear among these?</div>
             <div class="animals-grid">
               ${pageAnimals
                 .map(
@@ -226,7 +226,7 @@ function render() {
               ).join("")}
             </div>
             <div style="font-family:'Crimson Pro',serif;font-size:clamp(10px,2.2vw,12px);font-style:italic;color:#7a6040;text-align:center;margin-bottom:10px;">
-              ${found ? `Gate ${found.id} opens to reveal your creature` : "The spirits could not find your creature"}
+              ${found ? `Gate ${found.id} opens to reveal your choosen makeup item` : "The spirits could not find your choosen makeup item"}
             </div>
             <button class="btn-restart" onclick="location.reload()">✦ Cast a New Spell ✦</button>
           </div>
