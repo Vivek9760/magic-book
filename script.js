@@ -94,7 +94,7 @@ function render() {
             <div class="cover-shimmer"></div>
             <div class="cover-emblem">📖</div>
             <div class="cover-divider"></div>
-            <div class="cover-title">MAGIC<br>BOOK</div>
+            <div class="cover-title">Vibha's<br>MAGIC<br>BOOK</div>
             <div class="cover-divider"></div>
             <div class="cover-subtitle">A Mystical Mind Game</div>
             <div class="cover-click-hint">~ Touch to Open ~</div>
