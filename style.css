@@ -489,13 +489,13 @@
      opacity: 0.6;
  }
 
- .animals-grid {
+ .items-grid {
      display: grid;
      grid-template-columns: repeat(2, 1fr);
      gap: 6px;
  }
 
- .animal-tile {
+ .item-tile {
      background: rgba(139, 103, 55, 0.08);
      border: 1px solid rgba(139, 103, 55, 0.2);
      border-radius: 8px;
@@ -504,23 +504,23 @@
      animation: tile-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
  }
 
- .animal-tile:nth-child(1) {
+ .item-tile:nth-child(1) {
      animation-delay: 0.05s;
  }
 
- .animal-tile:nth-child(2) {
+ .item-tile:nth-child(2) {
      animation-delay: 0.10s;
  }
 
- .animal-tile:nth-child(3) {
+ .item-tile:nth-child(3) {
      animation-delay: 0.15s;
  }
 
- .animal-tile:nth-child(4) {
+ .item-tile:nth-child(4) {
      animation-delay: 0.20s;
  }
 
- .animal-tile:nth-child(5) {
+ .item-tile:nth-child(5) {
      animation-delay: 0.25s;
  }
 
@@ -536,12 +536,12 @@
      }
  }
 
- .animal-icon {
+ .item-icon {
      font-size: clamp(18px, 4vw, 24px);
      line-height: 1;
  }
 
- .animal-name {
+ .item-name {
      font-family: 'Crimson Pro', serif;
      font-size: clamp(9px, 2vw, 12px);
      color: var(--ink);
@@ -549,7 +549,7 @@
      margin-top: 2px;
  }
 
- /* right page decoration section — removed animals, just YES/NO */
+ /* right page decoration section — removed items, just YES/NO */
  .right-page-inner {
      display: flex;
      flex-direction: column;
@@ -796,13 +796,13 @@
      margin-bottom: 10px;
  }
 
- .animals-choose-grid {
+ .items-choose-grid {
      display: grid;
      grid-template-columns: repeat(5, 1fr);
      gap: 4px;
  }
 
- .choose-animal {
+ .choose-item {
      background: rgba(139, 103, 55, 0.1);
      border: 1px solid rgba(139, 103, 55, 0.22);
      border-radius: 8px;
@@ -811,51 +811,51 @@
      animation: tile-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
  }
 
- .choose-animal:nth-child(1) {
+ .choose-item:nth-child(1) {
      animation-delay: 0.05s
  }
 
- .choose-animal:nth-child(2) {
+ .choose-item:nth-child(2) {
      animation-delay: 0.1s
  }
 
- .choose-animal:nth-child(3) {
+ .choose-item:nth-child(3) {
      animation-delay: 0.15s
  }
 
- .choose-animal:nth-child(4) {
+ .choose-item:nth-child(4) {
      animation-delay: 0.2s
  }
 
- .choose-animal:nth-child(5) {
+ .choose-item:nth-child(5) {
      animation-delay: 0.25s
  }
 
- .choose-animal:nth-child(6) {
+ .choose-item:nth-child(6) {
      animation-delay: 0.3s
  }
 
- .choose-animal:nth-child(7) {
+ .choose-item:nth-child(7) {
      animation-delay: 0.35s
  }
 
- .choose-animal:nth-child(8) {
+ .choose-item:nth-child(8) {
      animation-delay: 0.4s
  }
 
- .choose-animal:nth-child(9) {
+ .choose-item:nth-child(9) {
      animation-delay: 0.45s
  }
 
- .choose-animal:nth-child(10) {
+ .choose-item:nth-child(10) {
      animation-delay: 0.5s
  }
 
- .choose-animal .icon {
+ .choose-item .icon {
      font-size: clamp(14px, 3.5vw, 20px);
  }
 
- .choose-animal .label {
+ .choose-item .label {
      font-family: 'Crimson Pro', serif;
      font-size: clamp(8px, 1.8vw, 10px);
      color: var(--ink);
@@ -905,7 +905,7 @@
          box-shadow: none;
      }
 
-     .animals-choose-grid {
+     .items-choose-grid {
          grid-template-columns: repeat(5, 1fr);
      }
 
@@ -1007,7 +1007,7 @@
      text-align: center;
  }
 
- .reveal-animal-icon {
+ .reveal-item-icon {
      font-size: clamp(60px, 15vw, 90px);
      filter: drop-shadow(0 0 30px #c9933a88);
      animation: reveal-bounce 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;

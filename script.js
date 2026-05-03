@@ -1,4 +1,4 @@
-// Each animal has bits[] = which pages it appears on (bitmask: 1, 2, 4, 8)
+// Each item has bits[] = which pages it appears on (bitmask: 1, 2, 4, 8)
 // The key magic: id === sum of bits where it appears
 // e.g. Owl = bits [1,2] → id=3; Fox = bits[1,8] → id=9
 const NAMES = [
@@ -25,7 +25,7 @@ const SARCASM = [
     sub: "No judgment. Well, a little",
   },
   { icon: "✨", comment: "Your makeup item escaped through a logical gap you helpfully provided. Impressive.", sub: "The oracle sighs" },
-  { icon: "🐾", comment: "The animals held a vote. They've agreed you were distracted. They're very forgiving.", sub: "Try once more, brave soul" },
+  { icon: "🐾", comment: "The items held a vote. They've agreed you were distracted. They're very forgiving.", sub: "Try once more, brave soul" },
 ];
 
 const DECO_VERSES = [
@@ -116,10 +116,10 @@ function render() {
           </div>
           <div class="choose-page choose-page-right">
             <div class="right-title">✦ The Makeup item's ✦</div>
-            <div class="animals-choose-grid">
+            <div class="items-choose-grid">
               ${NAMES.map(
                 (n) => `
-                <div class="choose-animal">
+                <div class="choose-item">
                   <div class="icon">${n.icon}</div>
                   <div class="label">${n.name}</div>
                 </div>`,
@@ -132,7 +132,7 @@ function render() {
     </div>`;
   } else if (state.screen === "page") {
     const bitValue = Math.pow(2, state.currentPage);
-    const pageAnimals = NAMES.filter((n) => n.bits.includes(bitValue));
+    const pageitems = NAMES.filter((n) => n.bits.includes(bitValue));
     const pageNum = state.currentPage + 1;
     const verse = DECO_VERSES[state.currentPage];
 
@@ -145,13 +145,13 @@ function render() {
             <div class="page-header">✦ Chapter ${pageNum} of 4 ✦</div>
             <div class="divider-ornament">— ✦ —</div>
             <div class="page-question">Does your item appear among these?</div>
-            <div class="animals-grid">
-              ${pageAnimals
+            <div class="items-grid">
+              ${pageitems
                 .map(
                   (n) => `
-                <div class="animal-tile">
-                  <div class="animal-icon">${n.icon}</div>
-                  <div class="animal-name">${n.name}</div>
+                <div class="item-tile">
+                  <div class="item-icon">${n.icon}</div>
+                  <div class="item-name">${n.name}</div>
                 </div>`,
                 )
                 .join("")}
@@ -203,10 +203,10 @@ function render() {
             <div class="magic-reveal-label">✦ THE ORACLE SPEAKS ✦</div>
             ${
               found
-                ? `<div class="reveal-animal-icon" id="revealIcon">${found.icon}</div>
+                ? `<div class="reveal-item-icon" id="revealIcon">${found.icon}</div>
                  <div class="reveal-name" id="revealName">${found.name}</div>
                  <div class="reveal-stars">✦ ✦ ✦</div>`
-                : `<div class="reveal-animal-icon" id="revealIcon">🌀</div>
+                : `<div class="reveal-item-icon" id="revealIcon">🌀</div>
                  <div class="reveal-name" style="font-size:clamp(11px,3vw,14px)">The spirits are<br>confused…</div>`
             }
             <div style="margin-top:14px;font-family:'Crimson Pro',serif;font-style:italic;font-size:clamp(10px,2.2vw,12px);color:#c9933a55;text-align:center;">
@@ -257,7 +257,7 @@ function render() {
       shownSarcasm = true;
       setTimeout(() => showSarcasm(), 800);
     }
-    // Also show sarcasm if total is 0 (all answered no) or not matching any creature
+    // Also show sarcasm if total is 0 (all answered no) or not matching any item
     if (total === 0) {
       setTimeout(() => showSarcasm(), 800);
     }
